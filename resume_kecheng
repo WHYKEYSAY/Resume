@@ -1,0 +1,259 @@
+%-------------------------
+% Resume in Latex
+% Author: Adapted by Grok 3 (xAI) based on template by Puneet Gautam
+% License: MIT
+%------------------------
+
+%---- Required Packages and Functions ----
+\documentclass[a4paper,11pt]{article}
+\usepackage{latexsym}
+\usepackage{xcolor}
+\usepackage{float}
+\usepackage{ragged2e}
+\usepackage[empty]{fullpage}
+\usepackage{wrapfig}
+\usepackage{lipsum}
+\usepackage{tabularx}
+\usepackage{titlesec}
+\usepackage{geometry}
+\usepackage{marvosym}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{multicol}
+\usepackage{graphicx}
+\usepackage{cfr-lm}
+\usepackage[T1]{fontenc}
+\setlength{\multicolsep}{0pt} 
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\geometry{left=0.6cm, top=0.5cm, right=0.6cm, bottom=0.5cm}
+\usepackage[most]{tcolorbox}
+\tcbset{
+    frame code={},
+    center title,
+    left=0pt,
+    right=0pt,
+    top=0pt,
+    bottom=0pt,
+    colback=gray!20,
+    colframe=white,
+    width=\dimexpr\textwidth\relax,
+    enlarge left by=-2mm,
+    boxsep=4pt,
+    arc=0pt,outer arc=0pt,
+}
+
+\urlstyle{same}
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-7pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item{
+    \textbf{#1}{:\hspace{0.5mm}#2 \vspace{-0.5mm}}
+  }
+}
+
+\newcommand{\resumePOR}[3]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1},\hspace{0.3mm}#2 & \textit{\small{#3}} 
+    \end{tabular*}
+    \vspace{-2mm}
+}
+
+\newcommand{\resumeSubheading}[4]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1} & \textit{\footnotesize{#4}} \\
+        \textit{\footnotesize{#3}} & \footnotesize{#2}\\
+    \end{tabular*}
+    \vspace{-2.4mm}
+}
+
+\newcommand{\resumeProject}[4]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1} & \textit{\footnotesize{#3}} \\
+        \footnotesize{\textit{#2}} & \footnotesize{#4}
+    \end{tabular*}
+    \vspace{-2.4mm}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemi}{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+% Adjusted itemsep for tighter spacing within lists
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*, labelsep=0mm, itemsep=-1mm]}
+\newcommand{\resumeHeadingSkillStart}{\begin{itemize}[leftmargin=*, itemsep=0mm, rightmargin=2ex]}
+\newcommand{\resumeItemListStart}{\begin{justify}\begin{itemize}[leftmargin=3ex, rightmargin=2ex, noitemsep, labelsep=1.2mm, itemsep=-1mm]\small}
+
+% Adjusted end commands for consistent spacing between sections
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{-3mm}}
+\newcommand{\resumeHeadingSkillEnd}{\end{itemize}\vspace{-3mm}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\end{justify}\vspace{-3mm}}
+
+\newcommand{\cvsection}[1]{%
+\vspace{2mm}
+\begin{tcolorbox}
+    \textbf{\large #1}
+\end{tcolorbox}
+    \vspace{-4mm}
+}
+
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}%
+\newcolumntype{R}{>{\raggedleft\arraybackslash}X}%
+\newcolumntype{C}{>{\centering\arraybackslash}X}%
+%---- End of Packages and Functions ------
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%
+%%%%%% DEFINE ELEMENTS HERE %%%%%%%
+\newcommand{\name}{Kecheng Yao}
+\newcommand{\job}{DevOps Engineer in Ericsson}
+\newcommand{\course}{Bachelor of Computer Engineering}
+\newcommand{\roll}{+1}
+\newcommand{\phone}{(438) 924-9834}
+\newcommand{\emaila}{kecheng.yao@mail.concordia.ca}
+\newcommand{\emailb}{whykeysay@gmail.com}
+\newcommand{\linkedin}{kecheng-yao-2a4511160}
+
+\begin{document}
+\fontfamily{cmr}\selectfont
+
+%----------HEADING-----------------
+\parbox{1.8cm}{% Left Logo
+    \includegraphics[width=1.5cm,clip]{Concordia_Logo.png}
+}\parbox{\dimexpr\linewidth-4.4cm\relax}{% Middle Text Block
+    \begin{tabularx}{\linewidth}{L r}
+        \textbf{\LARGE \name}      & \phone                               \\
+        \job                       & \href{mailto:\emaila}{\emaila}         \\
+        \course                    & \href{mailto:\emailb}{\emailb}         \\
+        {Concordia University}     &
+        \href{https://www.concordia.ca/cunews/offices/vpaer/aar/2017/05/08/big-leap-from-china-to-concordia.html}{Concordia News Interview} \textbar\
+        \href{https://www.linkedin.com/in/\linkedin/}{LinkedIn} \\
+    \end{tabularx}
+}\parbox{1.8cm}{% Right Logo
+    \raggedleft % Aligns the image to the right
+    \includegraphics[width=3cm,clip]{Ericsson-Logo.png}
+}
+
+\vspace{-2mm}
+
+
+%-----------EDUCATION-----------------
+\section{\textbf{Education}}
+\setlength{\tabcolsep}{5pt}
+\small{\begin{tabularx}
+{\dimexpr\textwidth-2mm\relax}{|p{5cm}|p{5cm}|c|p{4.5cm}|}
+    \hline
+    \textbf{Degree}                        & \textbf{Institute}       & \textbf{Year}  & \textbf{Note}                       \\
+    \hline
+    Bachelor of Computer Engineering Extended Credit Program & Concordia University, Montreal & Graduated April 2022 & Mr. and Mrs. Andrew Chan Scholarship \\
+    \hline
+    Master of Quality Systems Engineering (MASc) & Concordia University, Montreal & Started September 2025 & Power Corporation Grad GCS Scholarship \\
+    \hline
+\end{tabularx}}
+\vspace{-1mm}
+\resumeItemListStart
+    \item \textbf{Relevant Coursework:} AI-Powered Process Control, Generative AI for System Design, Automated Root Cause Analysis, Advanced Lean Methodologies, Data Structures/Algorithms, Operating System, Software Process, User Interface Design
+\resumeItemListEnd
+
+%-----------EXPERIENCE-----------------
+\section{\textbf{Experience}}
+\resumeSubHeadingListStart
+    \resumeSubheading
+        {Ericsson}{Montreal, Canada}
+        {DevOps Engineer}{August 2022 – Present}
+        \resumeItemListStart
+            \item \textbf{Cloud \& Infrastructure Management:} Spearheaded AWS De-identification service platform migration, achieving 99.9\% uptime and 40\% cost optimization. Managed Kubernetes/Docker clusters with daily monitoring, certificate renewals, resource quotas, and log analysis. Pursuing AWS SysOps and Azure Administrator certifications (Ericsson-sponsored).
+            \item \textbf{Automation \& Orchestration:} Designed automated Kubernetes pod management for PostgreSQL reporting via cron jobs and YAML scripting, reducing manual tasks by 90\%. Led OpsPlane initiative for server optimization and multi-platform integration.
+            \item \textbf{Monitoring \& Observability:} Implemented comprehensive monitoring stack (Prometheus, Grafana, Graylog, Zabbix), decreasing incident detection time from hours to minutes. Built data visualization dashboards using Kibana, Elasticsearch, Tableau, and Logstash.
+            \item \textbf{CI/CD Pipeline Management:} Managed 50+ GitLab repositories, accelerating deployment frequency by 3x. Designed automated testing pipelines for microservices, REST APIs, and Spring Boot applications using Jenkins and GitLab CI/CD.
+            \item \textbf{Technical Leadership:} Active Change Advisory Board (CAB) member, providing escalation support and guiding cross-functional teams. Led knowledge-sharing initiatives, documenting best practices for platform improvements and operational excellence.
+        \resumeItemListEnd
+\resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------------
+\section{\textbf{Projects}}
+\resumeSubHeadingListStart
+
+    \resumeProject
+        {EEGToolbox - Neural Signal Analysis Platform}
+        {Open-source EEG microstate analysis toolkit with automated pipeline processing}
+        {January 2024 - Present}
+        {}
+        \resumeItemListStart
+            \item {Designed automated pipeline reducing researcher manual work by 60\% through intelligent workflow orchestration and GPU acceleration support.}
+            \item {Built PyQt5-based GUI with drag-and-drop cluster reordering, interactive HTML visualizations, and multi-format export (PDF, SVG, PNG).}
+            \item {\textbf{Technologies:} Python, PyQt5, NumPy, SciPy, MNE, Matplotlib, Docker, YAML configuration, scientific computing libraries.}
+            \item {\textbf{Impact:} Used by neuroscience research teams; demonstrates systematic design methodology applied to complex scientific software.}
+        \resumeItemListEnd
+
+    \resumeProject
+        {Financial-advisor - AI-Powered FinTech Platform}
+        {Full-stack financial document processing system with microservices architecture}
+        {September 2024 - Present}
+        {}
+        \resumeItemListStart
+            \item {Designed cloud-native architecture: FastAPI backend, Next.js frontend, PostgreSQL database, Redis caching with Docker Compose orchestration.}
+            \item {Implemented AI-powered document analysis (OpenAI API), multi-language OCR (Tesseract), payment integration (Stripe), JWT authentication, and rate limiting.}
+            \item {Applied DevOps best practices: multi-stage Docker builds, health checks, database migrations (Alembic), non-root user security.}
+            \item {\textbf{Technologies:} FastAPI, Next.js, PostgreSQL, Redis, Docker, OpenAI, Tesseract OCR, Stripe, SQLAlchemy.}
+        \resumeItemListEnd
+
+    \resumeProject
+        {Azure Application \& Monitoring Platform}
+        {Deployed a scalable Azure platform for containerized applications with integrated monitoring}
+        {February 2025 - June 2025}
+        {}
+        \resumeItemListStart
+            \item{\textbf{Responsibilities:} AKS Cluster Management, Container Orchestration, Monitoring \& Alerting Configuration, Infrastructure Security, Network Configuration, CI/CD Integration.}
+            \item{\textbf{Technologies:} Azure (AKS, VMs, VNet, NSGs, ACR, Key Vault), Zabbix, Kubernetes, Docker, YAML, NGINX Ingress, Bash Scripting, Git.}
+        \resumeItemListEnd
+        
+    \resumeProject
+        {Migration Platform to AWS}
+        {Led enterprise platform migration to AWS, enhancing infrastructure reliability, scalability, and security}
+        {April 2024 - May 2024}
+        {}
+        \resumeItemListStart
+            \item {Managed AWS Configuration, Container Orchestration (EKS), Email Services, Backup/Patch Management, Security (KMS, IAM), Third-Party Integrations, DNS (Cloudflare).}
+            \item {\textbf{Technologies:} AWS (EC2, S3, CloudWatch, EKS, KMS, IAM, RDS), OpenSearch, Zabbix, Grafana, Prometheus, PostgreSQL.}
+        \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+%-----------SKILLS-----------------
+\section{\textbf{Technical Skills}}
+\resumeHeadingSkillStart
+    \resumeSubItem{Programming Languages}
+        {Python, Bash, Go, Java, JavaScript, SQL, Node.js}
+    \resumeSubItem{Cloud Platforms \& Infrastructure}
+        {AWS (EC2, EKS, S3, RDS, CloudWatch, IAM), Azure (AKS, VMs, VNet, ACR, Key Vault), Google Cloud, Linux, Unix}
+    \resumeSubItem{Container \& Orchestration}
+        {Kubernetes, Docker, Helm, Container security and optimization}
+    \resumeSubItem{Infrastructure as Code \& Automation}
+        {Terraform, Ansible, YAML, GitLab CI/CD, Jenkins, ArgoCD}
+    \resumeSubItem{Monitoring \& Observability}
+        {Prometheus, Grafana, Zabbix, Elasticsearch, Kibana, Graylog, Logstash, Tableau}
+    \resumeSubItem{Databases \& Caching}
+        {PostgreSQL, Redis, SQLAlchemy, Database migration strategies}
+    \resumeSubItem{Development Tools}
+        {Git, GitLab, GitHub, Visual Studio, MobaXterm, Putty, WinSCP, IntelliJ}
+\resumeHeadingSkillEnd
+%-------------------------------------------
+\vfill
+\end{document}
