@@ -193,7 +193,7 @@
     \resumeProject
         {EEGToolbox - Neural Signal Analysis Platform}
         {Open-source EEG microstate analysis toolkit with automated pipeline processing}
-        {January 2024 - Present}
+        {September 2025 - Present}
         {}
         \resumeItemListStart
             \item {Designed automated pipeline reducing researcher manual work by 60\% through intelligent workflow orchestration and GPU acceleration support.}
@@ -205,7 +205,7 @@
     \resumeProject
         {Financial-advisor - AI-Powered FinTech Platform}
         {Full-stack financial document processing system with microservices architecture}
-        {September 2024 - Present}
+        {October 2025 - Present}
         {}
         \resumeItemListStart
             \item {Designed cloud-native architecture: FastAPI backend, Next.js frontend, PostgreSQL database, Redis caching with Docker Compose orchestration.}
