@@ -54,8 +54,8 @@
 
 % Sections formatting
 \titleformat{\section}{
-  \vspace{-4pt}\scshape\raggedright\large
-}{}{0em}{}[\color{black}\titlerule \vspace{-7pt}]
+  \vspace{-20pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-10pt}]
 
 %-------------------------
 % Custom commands
@@ -101,9 +101,9 @@
 \newcommand{\resumeItemListStart}{\begin{justify}\begin{itemize}[leftmargin=3ex, rightmargin=2ex, noitemsep, labelsep=1.2mm, itemsep=-1mm]\small}
 
 % Adjusted end commands for consistent spacing between sections
-\newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{-3mm}}
-\newcommand{\resumeHeadingSkillEnd}{\end{itemize}\vspace{-3mm}}
-\newcommand{\resumeItemListEnd}{\end{itemize}\end{justify}\vspace{-3mm}}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{-1mm}}
+\newcommand{\resumeHeadingSkillEnd}{\end{itemize}\vspace{-1mm}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\end{justify}\vspace{-2mm}}
 
 \newcommand{\cvsection}[1]{%
 \vspace{2mm}
@@ -150,25 +150,21 @@
     \includegraphics[width=3cm,clip]{Ericsson-Logo.png}
 }
 
-\vspace{-2mm}
 
 
 %-----------EDUCATION-----------------
 \section{\textbf{Education}}
-\setlength{\tabcolsep}{5pt}
-\small{\begin{tabularx}
-{\dimexpr\textwidth-2mm\relax}{|p{5cm}|p{5cm}|c|p{4.5cm}|}
-    \hline
-    \textbf{Degree}                        & \textbf{Institute}       & \textbf{Year}  & \textbf{Note}                       \\
-    \hline
-    Bachelor of Computer Engineering Extended Credit Program & Concordia University, Montreal & Graduated April 2022 & Mr. and Mrs. Andrew Chan Scholarship \\
-    \hline
-    Master of Quality Systems Engineering (MASc) & Concordia University, Montreal & Started September 2025 & Power Corporation Grad GCS Scholarship \\
-    \hline
-\end{tabularx}}
-\vspace{-1mm}
+\resumeSubHeadingListStart
+    \resumeSubheading
+        {Master of Quality Systems Engineering (MASc)}{September 2025 – Present}
+        {Concordia University, Montreal}{Power Corporation Grad GCS Scholarship}
+    \resumeSubheading
+        {Bachelor of Computer Engineering}{Graduated April 2022}
+        {Concordia University, Montreal}{Mr. and Mrs. Andrew Chan Scholarship}
+\resumeSubHeadingListEnd
+\vspace{-2mm}
 \resumeItemListStart
-    \item \textbf{Relevant Coursework:} AI-Powered Process Control, Generative AI for System Design, Automated Root Cause Analysis, Advanced Lean Methodologies, Data Structures/Algorithms, Operating System, Software Process, User Interface Design
+    \item \textbf{Relevant Coursework:} AI-Powered Process Control, Generative AI for System Design, Automated Root Cause Analysis, Data Structures/Algorithms, Operating Systems, Software Process.
 \resumeItemListEnd
 
 %-----------EXPERIENCE-----------------
@@ -179,8 +175,8 @@
         {DevOps Engineer}{August 2022 – Present}
         \resumeItemListStart
             \item \textbf{Cloud \& Infrastructure Management:} Spearheaded AWS De-identification service platform migration, achieving 99.9\% uptime and 40\% cost optimization. Managed Kubernetes/Docker clusters with daily monitoring, certificate renewals, resource quotas, and log analysis. Pursuing AWS SysOps and Azure Administrator certifications (Ericsson-sponsored).
-            \item \textbf{Automation \& Orchestration:} Designed automated Kubernetes pod management for PostgreSQL reporting via cron jobs and YAML scripting, reducing manual tasks by 90\%. Led OpsPlane initiative for server optimization and multi-platform integration.
-            \item \textbf{Monitoring \& Observability:} Implemented comprehensive monitoring stack (Prometheus, Grafana, Graylog, Zabbix), decreasing incident detection time from hours to minutes. Built data visualization dashboards using Kibana, Elasticsearch, Tableau, and Logstash.
+            \item \textbf{Automation \& Orchestration:} Designed automated Kubernetes pod management for PostgreSQL reporting via cron jobs, reducing manual tasks by 90\%. Managed Kubernetes/Docker clusters with daily monitoring, certificate renewals, resource quotas, and log analysis.
+            \item \textbf{Monitoring \& Observability:} Implemented comprehensive monitoring stack (Prometheus, Grafana, Zabbix), decreasing incident detection time from hours to minutes. Built data visualization dashboards using Kibana, Elasticsearch, Tableau, and Logstash.
             \item \textbf{CI/CD Pipeline Management:} Managed 50+ GitLab repositories, accelerating deployment frequency by 3x. Designed automated testing pipelines for microservices, REST APIs, and Spring Boot applications using Jenkins and GitLab CI/CD.
             \item \textbf{Technical Leadership:} Active Change Advisory Board (CAB) member, providing escalation support and guiding cross-functional teams. Led knowledge-sharing initiatives, documenting best practices for platform improvements and operational excellence.
         \resumeItemListEnd
@@ -191,68 +187,65 @@
 \resumeSubHeadingListStart
 
     \resumeProject
+        {OpsPlane Architectural Evolution \& Security Initiative}
+        {Designing generalized infrastructure blueprints and securing software supply chains}
+        {November 2025 - Present}
+        {}
+        \resumeItemListStart
+            \item {Leading OpsPlane architectural evolution by designing generalized solutions and standardized blueprints for logging, monitoring, and automated infrastructure lifecycle management.}
+            \item {Secured software supply chains by migrating and monitoring critical blueprint tools and artifact registries from public sources to private repositories, ensuring enterprise-grade integrity.}
+            \item {Reduced manual operational overhead by 90\% through intelligent Kubernetes pod orchestration and automated environment provisioning.}
+        \resumeItemListEnd
+
+    \resumeProject
+        {KIRO AI Assistant - Architect-Level AI Toolkit}
+        {Enterprise AI assistant for AWS management, code intelligence, and documentation}
+        {January 2026 - April 2026}
+        {}
+        \resumeItemListStart
+            \item {Developed an "Architect-level" AI assistant available via CLI and IDE extensions, containerized with Docker for seamless enterprise deployment.}
+            \item {Automated high-impact tasks including Merge Request (MR) summarization, identification of unused AWS resources, and automated generation of presentation materials.}
+            \item {Implemented core capabilities for cloud resource management, code intelligence, and automated documentation syncing with Confluence.}
+            \item {Ensured operational hygiene by securing environment variables and credentials, while facilitating team transition to M365 Copilot and Glean.}
+        \resumeItemListEnd
+
+    \resumeProject
+        {Real-time Anomaly Detection Platform}
+        {ML-driven infrastructure monitoring and proactive incident detection}
+        {April 2026 - Present}
+        {}
+        \resumeItemListStart
+            \item {Leveraging OpenSearch Machine Learning (ML) features to implement real-time anomaly detection for complex infrastructure metrics.}
+            \item {Designing automated alerting and visualization pipelines to identify performance bottlenecks and potential security threats before they impact users.}
+        \resumeItemListEnd
+
+    \resumeProject
         {EEGToolbox - Neural Signal Analysis Platform}
         {Open-source EEG microstate analysis toolkit with automated pipeline processing}
         {September 2025 - Present}
         {}
         \resumeItemListStart
             \item {Designed automated pipeline reducing researcher manual work by 60\% through intelligent workflow orchestration and GPU acceleration support.}
-            \item {Built PyQt5-based GUI with drag-and-drop cluster reordering, interactive HTML visualizations, and multi-format export (PDF, SVG, PNG).}
-            \item {\textbf{Technologies:} Python, PyQt5, NumPy, SciPy, MNE, Matplotlib, Docker, YAML configuration, scientific computing libraries.}
             \item {\textbf{Impact:} Used by neuroscience research teams; demonstrates systematic design methodology applied to complex scientific software.}
         \resumeItemListEnd
 
-    \resumeProject
-        {Financial-advisor - AI-Powered FinTech Platform}
-        {Full-stack financial document processing system with microservices architecture}
-        {October 2025 - Present}
-        {}
-        \resumeItemListStart
-            \item {Designed cloud-native architecture: FastAPI backend, Next.js frontend, PostgreSQL database, Redis caching with Docker Compose orchestration.}
-            \item {Implemented AI-powered document analysis (OpenAI API), multi-language OCR (Tesseract), payment integration (Stripe), JWT authentication, and rate limiting.}
-            \item {Applied DevOps best practices: multi-stage Docker builds, health checks, database migrations (Alembic), non-root user security.}
-            \item {\textbf{Technologies:} FastAPI, Next.js, PostgreSQL, Redis, Docker, OpenAI, Tesseract OCR, Stripe, SQLAlchemy.}
-        \resumeItemListEnd
-
-    \resumeProject
-        {Azure Application \& Monitoring Platform}
-        {Deployed a scalable Azure platform for containerized applications with integrated monitoring}
-        {February 2025 - June 2025}
-        {}
-        \resumeItemListStart
-            \item{\textbf{Responsibilities:} AKS Cluster Management, Container Orchestration, Monitoring \& Alerting Configuration, Infrastructure Security, Network Configuration, CI/CD Integration.}
-            \item{\textbf{Technologies:} Azure (AKS, VMs, VNet, NSGs, ACR, Key Vault), Zabbix, Kubernetes, Docker, YAML, NGINX Ingress, Bash Scripting, Git.}
-        \resumeItemListEnd
         
-    \resumeProject
-        {Migration Platform to AWS}
-        {Led enterprise platform migration to AWS, enhancing infrastructure reliability, scalability, and security}
-        {April 2024 - May 2024}
-        {}
-        \resumeItemListStart
-            \item {Managed AWS Configuration, Container Orchestration (EKS), Email Services, Backup/Patch Management, Security (KMS, IAM), Third-Party Integrations, DNS (Cloudflare).}
-            \item {\textbf{Technologies:} AWS (EC2, S3, CloudWatch, EKS, KMS, IAM, RDS), OpenSearch, Zabbix, Grafana, Prometheus, PostgreSQL.}
-        \resumeItemListEnd
 
 \resumeSubHeadingListEnd
 
 %-----------SKILLS-----------------
 \section{\textbf{Technical Skills}}
 \resumeHeadingSkillStart
-    \resumeSubItem{Programming Languages}
-        {Python, Bash, Go, Java, JavaScript, SQL, Node.js}
-    \resumeSubItem{Cloud Platforms \& Infrastructure}
-        {AWS (EC2, EKS, S3, RDS, CloudWatch, IAM), Azure (AKS, VMs, VNet, ACR, Key Vault), Google Cloud, Linux, Unix}
-    \resumeSubItem{Container \& Orchestration}
-        {Kubernetes, Docker, Helm, Container security and optimization}
-    \resumeSubItem{Infrastructure as Code \& Automation}
-        {Terraform, Ansible, YAML, GitLab CI/CD, Jenkins, ArgoCD}
-    \resumeSubItem{Monitoring \& Observability}
-        {Prometheus, Grafana, Zabbix, Elasticsearch, Kibana, Graylog, Logstash, Tableau}
-    \resumeSubItem{Databases \& Caching}
-        {PostgreSQL, Redis, SQLAlchemy, Database migration strategies}
-    \resumeSubItem{Development Tools}
-        {Git, GitLab, GitHub, Visual Studio, MobaXterm, Putty, WinSCP, IntelliJ}
+    \resumeSubItem{Languages \& Databases}
+        {Python, Bash, Go, Java, JavaScript, SQL, Node.js, PostgreSQL, Redis, SQLAlchemy}
+    \resumeSubItem{Cloud \& Container}
+        {AWS (EC2, EKS, S3, RDS), Azure (AKS, ACR), Google Cloud, Kubernetes, Docker, Helm}
+    \resumeSubItem{Automation \& Security}
+        {Terraform, Ansible, GitLab CI/CD, ArgoCD, Software Supply Chain Security}
+    \resumeSubItem{AI \& Observability}
+        {Prompt Engineering, GenAI, OpenSearch ML, Prometheus, Grafana, ELK Stack, Zabbix}
+    \resumeSubItem{Tools}
+        {Git, GitHub, Linux, M365 Copilot, Glean, IntelliJ, Visual Studio}
 \resumeHeadingSkillEnd
 %-------------------------------------------
 \vfill
